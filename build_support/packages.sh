@@ -40,7 +40,8 @@ install() {
     DARWIN) install_mac ;;
 
     LINUX)
-      version=$(cat /etc/os-release | grep VERSION_ID | cut -d '"' -f 2)
+      #version=$(cat /etc/os-release | grep VERSION_ID | cut -d '"' -f 2)
+      version=22.04
       case $version in
         18.04) install_linux ;;
         20.04) install_linux ;;
